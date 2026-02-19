@@ -17,7 +17,7 @@ Este projeto é uma simulação de operações bancárias em Java, permitindo cr
 - Exibir informações completas da conta.
 
 
-## 📌 Exemplo de SaídaLOG: SAQUE - R$ 200.0 Seu saldo atual é de R$ 0.0
+## 📌 Exemplo de Saída
 
 LOG: SAQUE - R$ 200.0 Seu saldo atual é de R$ 0.0
 
