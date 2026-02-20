@@ -1,39 +1,68 @@
-# 🏦 Projeto Bank
+# Projeto Banco em Java
 
-Este projeto é uma simulação de operações bancárias em Java, permitindo criar contas, realizar depósitos e saques, e acompanhar o saldo com registros de log.
+Este projeto simula um sistema bancário simples, permitindo a criação de contas, inserção de clientes e operações básicas como depósito e saque.  
+O sistema roda via terminal e registra todas as operações realizadas.
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
-- `App.java`: Classe principal que executa o programa e demonstra as operações.
-- `Account.java`: Classe que representa uma conta bancária, com métodos para depósito, saque e exibição de informações.
-- `Log.java`: Classe auxiliar responsável por registrar e exibir mensagens de log.
+- **Bank.java**  
+  Classe responsável por gerenciar as contas de uma agência bancária.  
+  - Armazena a lista de contas.  
+  - Gera novas contas automaticamente com número sequencial.  
+  - Calcula o saldo total do banco.  
 
-## 🚀 Funcionalidades
+- **App.java**  
+  Classe principal que executa o programa.  
+  - Interage com o usuário via terminal.  
+  - Permite criar contas.  
+  - Oferece operações de depósito e saque.  
+  - Exibe todas as contas criadas e o saldo total do banco.  
 
-- Criar uma conta bancária com agência, número e titular.
-- Limitar o nome do titular a 12 caracteres.
-- Realizar depósitos com atualização de saldo e registro em log.
-- Efetuar saques com verificação de saldo e registro em log.
-- Exibir informações completas da conta.
+- **Account.java**  
+  Classe que representa uma conta bancária.  
+  - Possui atributos de agência, número da conta, nome do titular e saldo.  
+  - Limita o nome do titular a 12 caracteres.  
+  - Permite depósitos e saques, com validação de saldo.  
+  - Registra operações utilizando a classe `Log`.  
+  - Sobrescreve `toString()` para exibir informações da conta.  
+
+- **Log.java**  
+  Classe simples de log.  
+  - Exibe mensagens no console prefixadas com `"LOG:"`.  
+  - Usada para registrar operações de depósito e saque.  
+
+## Funcionalidades
+
+- Criar uma agência bancária.  
+- Inserir contas em uma agência.  
+- Gerar contas automaticamente com número sequencial.  
+- Realizar depósitos e saques.  
+- Calcular e exibir o saldo total do banco.  
+- Registrar operações realizadas em cada conta.
 
 
-## 📌 Exemplo de Saída
+## Exemplo de Uso
+O que deseja fazer? C=Criar conta, E=Sair do programa
 
-LOG: SAQUE - R$ 200.0 Seu saldo atual é de R$ 0.0
+C
 
-LOG: DEPOSITO - R$ 100.0 Sua conta agora é de R$ 100.0
+Digite o seu nome:
 
-LOG: DEPOSITO - R$ 50.0 Sua conta agora é de R$ 150.0
+Maria
 
-LOG: DEPOSITO - R$ 100.0 Sua conta agora é de R$ 250.0
+O que deseja fazer? D=Deposito, S=Saque, E=Sair da Conta
 
-LOG: SAQUE - R$ 200.0 Sua conta agora é de R$ 50.0
+D
 
-LOG: SAQUE - R$ 200.0 Seu saldo atual é de R$ 50.0
+Qual valor deseja depositar?
 
-A conta Seu Barriga 001 / 1234 possui: R$ 50.0
+200
+
+LOG: DEPOSITO - R$ 200.0 Sua conta agora é de R$ 200.0
 
 
-## 🛠️ Tecnologias Utilizadas
-- Java 17+ (ou versão compatível)
-- Paradigma de Programação Orientada a Objetos (POO)
+## Melhorias Futuras
+- Implementar transferências entre contas.
+- Persistir dados em arquivos ou banco de dados.
+- Criar interface gráfica para facilitar o uso.
+- Adicionar autenticação de usuários.
